@@ -1,0 +1,109 @@
+main {
+    min-height: 100vh;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: url('../assets/images/bg-pattern-top-desktop.svg');
+        top: 0;
+        left: 0;
+    }
+
+    &::after {
+        position: absolute;
+        content: url('../assets/images/bg-pattern-bottom-desktop.svg');
+        bottom: 0;
+        right: 0;
+    }
+
+    .product {
+        position: relative;
+        width: 80%;
+        min-height: 583px;
+
+        &__about {
+            &__title {
+                max-width: 35%;
+
+                h1 {
+                    font-size: $fs-xl;
+                }
+
+                p {
+                    margin-top: 1rem;
+                    font-size: $fs-md;
+                    color: $Dark-Grayish-Magenta;
+                }
+            }
+
+            &__rating {
+                min-width: 50%;
+
+                .star-rating {
+                    padding: 1rem 1rem 1rem 2rem;
+                    max-width: 80%;
+                    border-radius: 10px;
+                    background-color: $Light-Grayish-Magenta;
+
+                    &::before {
+                        content: url("../assets/images/icon-star.svg") "     " url("../assets/images/icon-star.svg") "     " url("../assets/images/icon-star.svg") "     " url("../assets/images/icon-star.svg") "     " url("../assets/images/icon-star.svg");
+                    }
+
+                    p {
+                        display: inline-block;
+                        margin-left: 1rem;
+                        color: $Very-Dark-Magenta;
+                        font-weight: $fw-bold;
+                    }
+
+                    &:nth-child(2) {
+                        margin: 1rem 0 1rem 3rem;
+
+                    }
+
+                    &:nth-child(3) {
+                        margin-left: 7.1rem;
+                    }
+                }
+            }
+
+        }
+
+        &__reviews {
+            width: 100%;
+            height: fit-content;
+
+            &__card {
+                width: 370px;
+                max-height: 234px;
+                padding: 3rem 2.4rem;
+                background-color: $Very-Dark-Magenta;
+                color: $White;
+                border-radius: 10px;
+
+                .author {
+                    font-size: $fs-sm;
+
+                    h3 {
+                        font-size: $fs-sm;
+                        font-weight: $fw-medium;
+                        color: $Soft-Pink;
+                    }
+
+                    img {
+                        border-radius: 50%;
+                        width: 20%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    margin-top: 1.5rem;
+                }
+
+                &:nth-child(3) {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}
